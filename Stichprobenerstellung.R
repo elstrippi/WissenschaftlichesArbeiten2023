@@ -33,5 +33,6 @@ MatheLK[Studienfach=="Statistik"]<- sample(c(TRUE, TRUE, TRUE, FALSE), 35, repla
 MatheLK[Studienfach=="Informatik"]<- sample(c(TRUE, FALSE), 22, replace = TRUE)
 
 
+Daten <- data.frame(Alter, Studienfach, InteresseAnMathe, InteresseAnProgrammieren, MatheLK)
 
 write.csv(Daten, "githubDaten.csv")
