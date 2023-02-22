@@ -1,28 +1,37 @@
 set.seed(420)
 Alter <- rnorm(100, 25, 4)
 Studienfach <- sample(c(rep("Statistik", 3), rep("Data Science", 3), rep("Informatik", 2), "Mathe"), 100, replace = TRUE)
-InteresseAnMathe <- sample(1:7, 100, replace = TRUE)
-InteresseAnProgrammieren <- sample(1:7, 100, replace = TRUE)
-MatheLK <- sample(c(TRUE, FALSE), 100, replace=TRUE)
-
-Daten <- data.frame(Alter, Studienfach, InteresseAnMathe, InteresseAnProgrammieren, MatheLK)
-
-Daten$InteresseAnMathe[which(Daten$Studienfach=="Mathe")] <- Daten$InteresseAnMathe[which(Daten$Studienfach=="Mathe")] + 2
-Daten$InteresseAnMathe[which(Daten$InteresseAnMathe > 7)] <- 7
-
-Daten$InteresseAnProgrammieren[which(Daten$Studienfach=="Informatik")] <- Daten$InteresseAnProgrammieren[which(Daten$Studienfach=="Informatik")] + 2
-Daten$InteresseAnProgrammieren[which(Daten$InteresseAnMathe > 7)] <- 7
-
-mean(Daten$InteresseAnMathe[which(Daten$Studienfach=="Mathe")])
-mean(Daten$InteresseAnMathe[which(Daten$Studienfach=="Informatik")])
-mean(Daten$InteresseAnMathe[which(Daten$Studienfach=="Data Science")])
-mean(Daten$InteresseAnMathe[which(Daten$Studienfach=="Statistik")])
 
 
-mean(Daten$InteresseAnProgrammieren[which(Daten$Studienfach=="Mathe")])
-mean(Daten$InteresseAnProgrammieren[which(Daten$Studienfach=="Informatik")])
-mean(Daten$InteresseAnProgrammieren[which(Daten$Studienfach=="Data Science")])
-mean(Daten$InteresseAnProgrammieren[which(Daten$Studienfach=="Statistik")])
+ProgMathe <- sample(1:7, 5, replace = TRUE)
+ProgInfo <- sample(5:7, 22, replace = TRUE)
+ProgData <- sample(3:7, 38, replace = TRUE)
+ProgStat <- sample(3:7, 35, replace = TRUE)
+
+InteresseAnProgrammieren <- 1;100
+InteresseAnProgrammieren[Studienfach=="Statisik"] <- ProgStat
+InteresseAnProgrammieren[Studienfach=="Data Science"] <- ProgData
+InteresseAnProgrammieren[Studienfach=="Informatik"] <- ProgInfo
+InteresseAnProgrammieren[Studienfach=="Mathe"] <- ProgMathe
+
+
+MatheMathe <- sample(5:7, 5, replace = TRUE)
+MatheInfo <- sample(1:7, 22, replace = TRUE)
+MatheData <- sample(3:7, 38, replace = TRUE)
+MatheStat <- sample(3:7, 35, replace = TRUE)
+
+InteresseAnMathe <- 1;100
+InteresseAnMathe[Studienfach=="Statisik"] <- MatheStat
+InteresseAnMathe[Studienfach=="Data Science"] <- MatheData
+InteresseAnMathe[Studienfach=="Informatik"] <- MatheInfo
+InteresseAnMathe[Studienfach=="Mathe"] <- MatheMathe
+
+MatheLK <- 1:100
+MatheLK[Studienfach=="Mathe"] <- "True"
+MatheLK[Studienfach=="Data Science"] <- sample(c(TRUE, TRUE, TRUE, FALSE), 38, replace = TRUE)
+MatheLK[Studienfach=="Statistik"]<- sample(c(TRUE, TRUE, TRUE, FALSE), 35, replace = TRUE)
+MatheLK[Studienfach=="Informatik"]<- sample(c(TRUE, FALSE), 22, replace = TRUE)
+
 
 
 write.csv(Daten, "githubDaten.csv")
