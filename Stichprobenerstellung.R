@@ -8,7 +8,7 @@ ProgInfo <- sample(5:7, 22, replace = TRUE)
 ProgData <- sample(3:7, 38, replace = TRUE)
 ProgStat <- sample(3:7, 35, replace = TRUE)
 
-InteresseAnProgrammieren <- 1;100
+InteresseAnProgrammieren <- 1:100
 InteresseAnProgrammieren[Studienfach=="Statisik"] <- ProgStat
 InteresseAnProgrammieren[Studienfach=="Data Science"] <- ProgData
 InteresseAnProgrammieren[Studienfach=="Informatik"] <- ProgInfo
@@ -20,7 +20,7 @@ MatheInfo <- sample(1:7, 22, replace = TRUE)
 MatheData <- sample(3:7, 38, replace = TRUE)
 MatheStat <- sample(3:7, 35, replace = TRUE)
 
-InteresseAnMathe <- 1;100
+InteresseAnMathe <- 1:100
 InteresseAnMathe[Studienfach=="Statisik"] <- MatheStat
 InteresseAnMathe[Studienfach=="Data Science"] <- MatheData
 InteresseAnMathe[Studienfach=="Informatik"] <- MatheInfo
