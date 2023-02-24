@@ -1,5 +1,5 @@
 set.seed(420)
-Alter <- rnorm(100, 25, 4)
+Alter <- rnorm(100, 25, 2)
 Studienfach <- sample(c(rep("Statistik", 3), rep("Data Science", 3), rep("Informatik", 2), "Mathe"), 100, replace = TRUE)
 
 
