@@ -43,3 +43,38 @@ MatheLK[Studienfach=="Informatik"]<- sample(c(TRUE, FALSE), 22, replace = TRUE)
 #.csv erstellen 
 Daten <- data.frame(Alter, Studienfach, InteresseAnMathe, InteresseAnProgrammieren, MatheLK)
 write.csv(Daten, "githubDaten.csv")
+
+read.csv("githubDaten.csv", sep = ",")
+
+#a)
+#b)
+str(Daten)
+ktgo_var <- factor(Daten$Studienfach)
+
+#b)
+functiona <- function(x){
+  Durchschnitt <- mean(x)
+  Varianz <- var(x)
+  Standardabweichung <- sqrt(Varianz)
+  Median <- median(x)
+  int_qabs <- IQR(x)
+  Ergebnisse <- data.frame(Durchschnitt, Varianz, Standardabweichung, 
+                        Median)
+  print(Ergebnisse)
+}
+
+functiona(table(ktgo_var))
+
+
+#c)
+
+functiona <- function(x,y){
+  korrelation <- cor(x,y)
+  kovarianz <- cov(x,y)
+  Ergebnisse <- data.frame(korrelation, kovarianz)
+  print(Ergebnisse)
+}
+
+functiona(as.numeric(ktgo_var), as.numeric(Daten$InteresseAnMathe))
+functiona(as.numeric(Daten$InteresseAnProgrammieren), as.numeric(Daten$InteresseAnMathe))
+functiona(as.numeric(ktgo_var), as.numeric(Daten$InteresseAnProgrammieren))
