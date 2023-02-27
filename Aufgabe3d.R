@@ -31,8 +31,3 @@ bivariate_stats <- function(met_var, dich_var) {
   print(result)
 }
 
-met_var <- c(23, 45, 67, 34, 56, 12, 32, 46, 57, 38)
-dich_var <- c(1, 0, 0, 1, 1, 0, 0, 1, 1, 0)
-
-# Anwendung der Funktion
-bivariate_stats(met_var, dich_var)
