@@ -1,7 +1,7 @@
 #a)
 library(moments)
-Daten <- read.csv("githubDaten.csv", header = TRUE)
-functiona <- function(vector, print = FALSE){
+#Daten <- read.csv("githubDaten.csv", header = TRUE)
+deskStaterstellinator<- function(vector, print = FALSE){
   Durchschnitt <- mean(vector)
   Varianz <- var(vector)
   Standardabweichung <- sqrt(Varianz)
@@ -53,6 +53,6 @@ functiona <- function(vector, print = FALSE){
   invisible(ausgabe)
 }
 
-functiona(Daten$Alter, print = TRUE)
-d <- functiona(Daten$Alter)
-d
+#functiona(Daten$Alter, print = TRUE)
+#d <- functiona(Daten$Alter)
+#d
