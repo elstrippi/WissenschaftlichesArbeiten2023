@@ -34,7 +34,7 @@ InteresseAnMathe[Studienfach=="Mathe"] <- MatheMathe
 #War jemand im Mathe LK?
 ##Fuer jeden Studiengang werden eigene Werte gezogen 
 MatheLK <- 1:100
-MatheLK[Studienfach=="Mathe"] <- "True"
+MatheLK[Studienfach=="Mathe"] <- "TRUE"
 MatheLK[Studienfach=="Data Science"] <- sample(c(TRUE, TRUE, TRUE, FALSE), 38, replace = TRUE)
 MatheLK[Studienfach=="Statistik"]<- sample(c(TRUE, TRUE, TRUE, FALSE), 35, replace = TRUE)
 MatheLK[Studienfach=="Informatik"]<- sample(c(TRUE, FALSE), 22, replace = TRUE)
