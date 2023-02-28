@@ -2,7 +2,7 @@ bivariate_stats <- function(met_var, mlk) {
   
   # Konvertiere die dichotome Variable in einen Faktor
   
-  mlkc<- ifelse(mlk == 1, "Ja", "Nein")
+  mlkc<- ifelse(mlk == TRUE, "Ja", "Nein")
   
   # Berechne die Häufigkeiten und Prozentsätze der dichotomen Variable
   dich_freq <- table(mlkc)

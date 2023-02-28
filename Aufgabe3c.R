@@ -1,6 +1,6 @@
 #Augabe3_c:
 
-functiona <- function(x,y){
+DesBiStat <- function(x,y){
   korrelation <- cor(x,y)
   kovarianz <- cov(x,y)
   Ergebnisse <- data.frame(korrelation, kovarianz)
