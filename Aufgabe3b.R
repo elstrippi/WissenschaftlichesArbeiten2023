@@ -1,7 +1,7 @@
 #Aufgabe3_b:
 
 #b)
-functiona <- function(x){
+SatKat <- function(x){
   tab <- table(x)
   AnzmAusp <- length(table(x)) # Anzahl Merkmalsauspraegungen
   rel.Hauefikeit <- prop.table(tab) # relative Hauefigkeiten
@@ -17,4 +17,4 @@ functiona <- function(x){
   print(Ergebnisse)
 }
 #x <- factor(Daten$Studienfach)
-functiona(factor(Daten$Studienfach))
+#functiona(factor(Daten$Studienfach))
