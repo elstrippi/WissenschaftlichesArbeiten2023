@@ -1,10 +1,10 @@
 #Augabe3_c:
-
-DesBiStat <- function(x,y){
-  korrelation <- cor(x,y)
-  kovarianz <- cov(x,y)
-  Ergebnisse <- data.frame(korrelation, kovarianz)
-  print(Ergebnisse)
+categorical_relationship <- function(var1, var2) {
+  # Erstellen der Kreuztabelle
+  tab <- table(var1, var2)
+  # Durchführung des Chi-Quadrat-Tests
+  chi_sq_test <- chisq.test(tab)
+  # Rückgabe der Ergebnisse des Chi-Quadrat-Tests
+  return(chi_sq_test)
 }
 
-#functiona(as.numeric(ktgo_var), as.numeric(Daten$InteresseAnMathe))
