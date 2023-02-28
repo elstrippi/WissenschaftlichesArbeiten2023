@@ -3,7 +3,7 @@
 #obersten 25% zu "hoch" und der Rest zu "mittel" umbenannt wurden
 kategorisierer3000 = function(var){
   ord_var = factor(var, ordered = TRUE)
-  quant = as.numeric(levels(quantile(ord_var, type = 1)))
+  quant = quantile(ord_var, type = 1)
   #Hier drin werden die Umbenennungen für die Faktoren gespeichert
   new_level = rep(0, length(levels(ord_var)))
   print(quant)
