@@ -7,4 +7,4 @@ functiona <- function(x,y){
   print(Ergebnisse)
 }
 
-functiona(as.numeric(ktgo_var), as.numeric(Daten$InteresseAnMathe))
+#functiona(as.numeric(ktgo_var), as.numeric(Daten$InteresseAnMathe))
